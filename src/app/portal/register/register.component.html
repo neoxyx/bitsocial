@@ -1,0 +1,31 @@
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+  
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <img src="../../../assets/img/logo.PNG" id="icon" alt="User Icon" />
+      </div>
+  
+    <!-- Register Form -->
+    <form [formGroup]="signUpForm" (ngSubmit)="checkIn()">
+        <input type="email" class="fadeIn second" formControlName="email" placeholder="Email">
+        <input type="password" class="fadeIn third" formControlName="password" placeholder="Contraseña">
+        <input type="text" class="fadeIn third" formControlName="nickname" placeholder="Usuario">
+        <!--<input type="text" class="fadeIn third" formControlName="fullname" placeholder="Nombre completo">
+        <input type="text" class="fadeIn third" formControlName="birthdate" placeholder="Fecha de nacimiento">
+        <input type="text" class="fadeIn third" formControlName="image" placeholder="Imagen">-->
+        <input type="text" class="fadeIn third" formControlName="applicantcode" placeholder="Código aplicante">
+        <button class="btn btn-primary" type="submit" [disabled]="signUpForm.invalid">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Registrar
+        </button>
+    </form>
+  <br>
+      <!-- Remind Passowrd -->
+      <div id="formFooter">
+        <a class="underlineHover" routerLink="/login">Log In</a>
+      </div>
+  
+    </div>
+  </div>
